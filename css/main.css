@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -20,7 +21,11 @@ body header div {
 body {
     background: linear-gradient(to left, #00944d, #00944ce9, #00944c76);
     z-index: -1;
-    height: 1000vh;
+    height: 80vh;
+    -webkit-user-select: none; /* 사파리, 크롬 */
+    -moz-user-select: none;    /* 파이어폭스 */
+    -ms-user-select: none; /* 인터넷 익스플로러 */
+    user-select: none;        /* 표준 */
 }
 #logo img {
     object-fit: contain;
@@ -66,4 +71,47 @@ body {
 }
 #shopping {
     left: 95%;
+}
+.main-title {
+    position: absolute;
+    top: 50%;
+    left: 82%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'Black Han Sans', serif;
+    font-size: 100px; 
+    white-space: nowrap;
+}
+.sinsegea {
+    position: absolute;
+    top: 75%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'Hahmlet', serif;
+    font-size: 30px; 
+    font-weight: bold;
+    white-space: nowrap;
+}
+.DCC {
+    position: absolute;
+    top: 73%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'Hahmlet',  serif;
+    font-size: 22px; 
+    font-weight: bold;
+    white-space: nowrap;
+}
+.hotel {
+    position: absolute;
+    top: 78%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'Hahmlet', serif;
+    font-size: 22px; 
+    font-weight: bold;
+    white-space: nowrap;
 }
