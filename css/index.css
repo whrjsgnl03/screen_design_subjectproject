@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Dongle&display=swap");
+
+.dongle-regular {
+    font-family: "Dongle", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background: linear-gradient(to left, #00944d, #00944ce9, #00944c76);
+}
+
+#source img{
+    object-fit: contain;
+    position: absolute;
+    left: 20%;
+    top: 49.5%;
+    width: 26%;   
+    height: 10%;
+    transform: translate(-50%, -50%);
+}
+#logo img{
+    object-fit: contain;
+    position: absolute;
+    left: 37%;
+    top: 49%;
+    width: 10%;   
+    height: 10%;
+    transform: translate(-50%, -50%);
+}
+#mascot img{
+    object-fit: contain;
+    position: absolute;
+    left: 68%;
+    top: 50%;
+    width: 60%;   
+    height: 60%;
+    transform: translate(-50%, -50%);
+}
+
+#source img:hover {
+    background-color: rgba(0, 0, 0, 0);
+    transition: all 1s ease;
+}

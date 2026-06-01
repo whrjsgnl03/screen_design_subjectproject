@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@100..900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body header {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.356);
+}
+body header div {
+    color: rgb(255, 255, 255);
+}
+body {
+    background: linear-gradient(to left, #00944d, #00944ce9, #00944c76);
+    z-index: -1;
+    height: 1000vh;
+}
+#logo img {
+    object-fit: contain;
+    position: absolute;
+    left: 9%;
+    top: 50%;
+    width: 20%;
+    height: 20%;
+    transform: translate(-50%, -50%);
+}
+#name img {
+    object-fit: contain;
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    width: 20%;
+    height: 20%;
+    transform: translate(-50%, -50%);
+}
+.text-button {
+    text-decoration: none;
+    position: absolute;
+    top: 48%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    color: white;
+    font-family: 'Hahmlet', serif;
+}
+#history {
+    left: 60%;
+}
+#restaurants {
+    left: 67%;
+}
+#tour {
+    left: 74%;
+}
+#festival {
+    left: 81%;
+}
+#map {
+    left: 88%;
+}
+#shopping {
+    left: 95%;
+}
