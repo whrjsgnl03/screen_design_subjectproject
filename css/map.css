@@ -123,3 +123,12 @@ body {
     font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.6);
 }
+.map_title {
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.map {
+    margin-top: 95px;
+    margin-bottom: 0px;
+}

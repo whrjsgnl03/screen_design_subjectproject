@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body header {
     width: 100%;
     height: 90px;
@@ -16,16 +20,23 @@ body header {
     z-index: 100;
     background-color: rgba(0, 0, 0, 0.356);
 }
+
 body header div {
     color: rgb(255, 255, 255);
 }
+
 body {
     background: linear-gradient(to left, #00944d, #00944ce9, #00944c76);
     z-index: -1;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    -webkit-user-select: none; /* 사파리, 크롬 */
+    -moz-user-select: none;    /* 파이어폭스 */
+    -ms-user-select: none; /* 인터넷 익스플로러 */
+    user-select: none;        /* 표준 */
 }
+
 #logo img {
     object-fit: contain;
     position: absolute;
@@ -35,6 +46,7 @@ body {
     height: 20%;
     transform: translate(-50%, -50%);
 }
+
 #name img {
     object-fit: contain;
     position: absolute;
@@ -44,15 +56,17 @@ body {
     height: 20%;
     transform: translate(-50%, -50%);
 }
+
 .text-button {
     text-decoration: none;
     position: absolute;
     top: 48%;
     transform: translate(-50%, -50%);
-    font-size: 1.5rem;
+    font-size: 24px;
     color: white;
     font-family: 'Hahmlet', serif;
 }
+
 #history {
     left: 60%;
 }
@@ -72,6 +86,400 @@ body {
     left: 95%;
 }
 
+/* 맛집 컨테이너 및 타이틀 */
+.matjib_box {
+    margin-top: 130px;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    flex: 1;
+}
+
+.restaurants_title {
+    font-family: 'Black Han Sans', serif;
+    font-size: 60px;
+    color: white;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.restaurants_subtitle {
+    font-family: 'Hahmlet', serif;
+    font-size: 20px;
+    color: white;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* 스크롤 박스 영역 */
+.scroll_box {
+    border: 2px solid #FFFFFF;
+    width: 100%;
+    max-width: 100%;
+    height: 900px;
+    overflow-y: auto;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+/* 스크롤바 디자인 변경 */
+.scroll_box::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scroll_box::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+}
+
+.scroll_box::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.scroll_box::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* 성심당 카드 */
+.sungsimdang2 {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 2px solid white;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    overflow: hidden;
+    opacity: 1;
+}
+
+/* 광천식당 카드 */
+.gwangcheon2 {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 2px solid white;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    overflow: hidden;
+    opacity: 1;
+}
+
+/* 오씨칼국수 카드 */
+.ohssi2 {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 2px solid white;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    overflow: hidden;
+    opacity: 1;
+}
+
+/* 태평소국밥 카드 */
+.taepyung2 {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 2px solid white;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    overflow: hidden;
+    opacity: 1;
+}
+
+/* 진로집 카드 */
+.jinro2 {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 2px solid white;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    overflow: hidden;
+    opacity: 1;
+}
+
+/* 바로그집 카드 */
+.baro2 {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 2px solid white;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    overflow: hidden;
+    opacity: 1;
+}
+
+/* 신도칼국수 카드 */
+.sindo2 {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 2px solid white;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    overflow: hidden;
+    opacity: 1;
+}
+
+/* 케익부띠끄 카드 */
+.boutique2 {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 2px solid white;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    overflow: hidden;
+    opacity: 1;
+}
+
+/* 카드 이미지 감싸개 */
+.img_wrap {
+    width: 38%;
+    height: 320px;
+    overflow: hidden;
+    position: relative;
+    border-right: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* 맛집 이미지 */
+.res_img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+/* 카드 내 오른쪽 글씨 구역 */
+.text_box {
+    width: 62%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* 카드 헤더 */
+.card_header {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 8px;
+}
+
+/* 1. 성심당 이름 */
+.one_one {
+    font-family: 'Bagel Fat One', cursive;
+    font-size: 37px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    color: #EFD2A8;
+}
+
+/* 2. 광천식당 이름 */
+.two_one {
+    font-family: 'Bagel Fat One', cursive;
+    font-size: 37px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    color: #FFAB91;
+}
+
+/* 3. 오씨칼국수 이름 */
+.three_one {
+    font-family: 'Bagel Fat One', cursive;
+    font-size: 37px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    color: #81D4FA;
+}
+
+/* 4. 태평소국밥 이름 */
+.four_one {
+    font-family: 'Bagel Fat One', cursive;
+    font-size: 37px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    color: #FFE082;
+}
+
+/* 5. 진로집 이름 */
+.five_one {
+    font-family: 'Bagel Fat One', cursive;
+    font-size: 37px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    color: #FF8A80;
+}
+
+/* 6. 바로그집 이름 */
+.six_one {
+    font-family: 'Bagel Fat One', cursive;
+    font-size: 37px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    color: #FFD54F;
+}
+
+/* 7. 신도칼국수 이름 */
+.seven_one {
+    font-family: 'Bagel Fat One', cursive;
+    font-size: 37px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    color: #A5D6A7;
+}
+
+/* 8. 케익부띠끄 이름 */
+.eight_one {
+    font-family: 'Bagel Fat One', cursive;
+    font-size: 37px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    color: #F8BBD0;
+}
+
+/* 1. 성심당 접미사 */
+.one_two {
+    font-family: 'Black Han Sans', serif;
+    font-size: 21px;
+    color: white;
+    margin-left: 10px;
+}
+
+/* 2. 광천식당 접미사 */
+.two_two {
+    font-family: 'Black Han Sans', serif;
+    font-size: 21px;
+    color: white;
+    margin-left: 10px;
+}
+
+/* 3. 오씨칼국수 접미사 */
+.three_two {
+    font-family: 'Black Han Sans', serif;
+    font-size: 21px;
+    color: white;
+    margin-left: 10px;
+}
+
+/* 4. 태평소국밥 접미사 */
+.four_two {
+    font-family: 'Black Han Sans', serif;
+    font-size: 21px;
+    color: white;
+    margin-left: 10px;
+}
+
+/* 5. 진로집 접미사 */
+.five_two {
+    font-family: 'Black Han Sans', serif;
+    font-size: 21px;
+    color: white;
+    margin-left: 10px;
+}
+
+/* 6. 바로그집 접미사 */
+.six_two {
+    font-family: 'Black Han Sans', serif;
+    font-size: 21px;
+    color: white;
+    margin-left: 10px;
+}
+
+/* 7. 신도칼국수 접미사 */
+.seven_two {
+    font-family: 'Black Han Sans', serif;
+    font-size: 21px;
+    color: white;
+    margin-left: 10px;
+}
+
+/* 8. 케익부띠끄 접미사 */
+.eight_two {
+    font-family: 'Black Han Sans', serif;
+    font-size: 21px;
+    color: white;
+    margin-left: 10px;
+}
+
+/* 카테고리 텍스트 */
+.cat_text {
+    font-family: 'Black Han Sans', serif;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 12px;
+}
+
+/* 메뉴 텍스트 */
+.menu_text {
+    font-family: 'Hahmlet', serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #d0d0d0;
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 6px 14px;
+    border-radius: 0px;
+    align-self: flex-start;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 1. 성심당 설명 */
+.one_three {
+    font-family: 'Hahmlet', serif;
+    font-size: 17px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+/* 2. 광천식당 설명 */
+.two_three {
+    font-family: 'Hahmlet', serif;
+    font-size: 17px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+/* 3. 오씨칼국수 설명 */
+.three_three {
+    font-family: 'Hahmlet', serif;
+    font-size: 17px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+/* 4. 태평소국밥 설명 */
+.four_three {
+    font-family: 'Hahmlet', serif;
+    font-size: 17px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+/* 5. 진로집 설명 */
+.five_three {
+    font-family: 'Hahmlet', serif;
+    font-size: 17px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+/* 6. 바로그집 설명 */
+.six_three {
+    font-family: 'Hahmlet', serif;
+    font-size: 17px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+/* 7. 신도칼국수 설명 */
+.seven_three {
+    font-family: 'Hahmlet', serif;
+    font-size: 17px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+/* 8. 케익부띠끄 설명 */
+.eight_three {
+    font-family: 'Hahmlet', serif;
+    font-size: 17px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.95);
+}
+
 .footer {
     position: relative;
     z-index: 50;
@@ -80,7 +488,7 @@ body {
     text-align: center;
     color: white;
     font-family: 'Hahmlet', serif;
-    font-size: 1.2rem;
+    font-size: 19px;
     line-height: 2;
     padding: 40px 0 40px 0;
 }
@@ -90,10 +498,24 @@ body {
     color: white;
 }
 .footer_info {
-    font-size: 1rem;
+    font-size: 16px;
     color: rgba(255, 255, 255, 0.8);
 }
 .footer_copy {
-    font-size: 0.9rem;
+    font-size: 14px;
     color: rgba(255, 255, 255, 0.6);
+}
+.map_title {
+    margin-top: 50px;
+    color: #ffffff;
+    font-family: 'Black Han Sans', serif;
+    font-size: 50px;
+    text-align: center;
+}
+.map-iframe {
+    position: relative;
+    left: 450px;
+    border-radius: 30px;
+    margin-bottom: 60px;
+    margin-top: 20px;
 }
