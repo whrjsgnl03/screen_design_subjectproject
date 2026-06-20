@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -22,7 +24,9 @@ body header div {
 body {
     background: linear-gradient(to left, #00944d, #00944ce9, #00944c76);
     z-index: -1;
-    height: 1000vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 #logo img {
     object-fit: contain;
@@ -68,4 +72,147 @@ body {
 }
 #shopping {
     left: 95%;
+}
+
+.footer {
+    position: relative;
+    z-index: 50;
+    margin-top: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    color: white;
+    font-family: 'Hahmlet', serif;
+    font-size: 1.2rem;
+    line-height: 2;
+    padding: 40px 0 40px 0;
+}
+.footer_links {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+}
+.footer_info {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+.footer_copy {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* History Main Styles */
+.history_container {
+    margin-top: 150px;
+    margin-bottom: 80px;
+    text-align: center;
+    width: 100%;
+}
+
+.history_title {
+    font-family: 'Black Han Sans', serif;
+    font-size: 60px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.history_subtitle {
+    font-family: 'Hahmlet', serif;
+    font-size: 20px;
+    color: white;
+    margin-bottom: 50px;
+}
+
+/* Timeline Container */
+.timeline_section {
+    position: relative;
+    width: 98%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* White Bar (하얀 막대기) */
+.timeline_line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: white;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+/* History Box Wrapper */
+.history_box {
+    position: relative;
+    width: 50%;
+    padding: 60px 40px;
+    box-sizing: border-box;
+}
+
+.history_box.left {
+    left: 0;
+    text-align: right;
+}
+
+.history_box.right {
+    left: 50%;
+    text-align: left;
+}
+
+/* History Card Content */
+.history_card {
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 60px 50px;
+    color: white;
+}
+
+/* Dot on the Line */
+.history_dot {
+    position: absolute;
+    top: 100px;
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border: 3px solid #00944d;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.history_box.left .history_dot {
+    right: -8px;
+}
+
+.history_box.right .history_dot {
+    left: -8px;
+}
+
+.history_year {
+    font-family: 'Bagel Fat One', cursive;
+    font-size: 30px;
+    color: #FFE082;
+    margin-bottom: 10px;
+}
+
+.history_name {
+    font-family: 'Black Han Sans', serif;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.history_info {
+    font-family: 'Hahmlet', serif;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.history_img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }

@@ -23,7 +23,9 @@ body header div {
 body {
     background: linear-gradient(to left, #00944d, #00944ce9, #00944c76);
     z-index: -1;
-    height: 90vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 #logo img {
     object-fit: contain;
@@ -94,4 +96,30 @@ body {
 }
 .map-iframe {
     margin-bottom: 0;
+}
+
+.footer {
+    position: relative;
+    z-index: 50;
+    margin-top: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    color: white;
+    font-family: 'Hahmlet', serif;
+    font-size: 1.2rem;
+    line-height: 2;
+    padding: 40px 0 40px 0;
+}
+.footer_links {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+}
+.footer_info {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+.footer_copy {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
 }
