@@ -1,11 +1,16 @@
+/* 외부 구글 웹폰트 로드 */
 @import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap');
+
+/* 마진, 패딩 초기화 */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+/* 상단 네비게이션 헤더 바 */
 body header {
     width: 100%;
     height: 90px;
@@ -18,9 +23,12 @@ body header {
     z-index: 100;
     background-color: rgba(0, 0, 0, 0.356);
 }
+
 body header div {
     color: rgb(255, 255, 255);
 }
+
+/* 바디 기본 배경 그라데이션 및 크기 */
 body {
     background: linear-gradient(to left, #00944d, #00944ce9, #00944c76);
     z-index: -1;
@@ -28,6 +36,8 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+/* 헤더 심볼 로고 */
 #logo img {
     object-fit: contain;
     position: absolute;
@@ -37,6 +47,8 @@ body {
     height: 20%;
     transform: translate(-50%, -50%);
 }
+
+/* 헤더 텍스트 로고 */
 #name img {
     object-fit: contain;
     position: absolute;
@@ -46,6 +58,8 @@ body {
     height: 20%;
     transform: translate(-50%, -50%);
 }
+
+/* 메뉴 버튼들 공통 스타일 */
 .text-button {
     text-decoration: none;
     position: absolute;
@@ -55,25 +69,16 @@ body {
     color: white;
     font-family: 'Hahmlet', serif;
 }
-#history {
-    left: 60%;
-}
-#restaurants {
-    left: 67%;
-}
-#tour {
-    left: 74%;
-}
-#festival {
-    left: 81%;
-}
-#map {
-    left: 88%;
-}
-#shopping {
-    left: 95%;
-}
 
+/* 버튼별 가로 배치 좌표 */
+#history { left: 60%; }
+#restaurants { left: 67%; }
+#tour { left: 74%; }
+#festival { left: 81%; }
+#map { left: 88%; }
+#shopping { left: 95%; }
+
+/* 하단 푸터 레이아웃 */
 .footer {
     position: relative;
     z-index: 50;
@@ -86,21 +91,24 @@ body {
     line-height: 2;
     padding: 40px 0 40px 0;
 }
+
 .footer_links {
     font-weight: bold;
     margin-bottom: 10px;
     color: white;
 }
+
 .footer_info {
     font-size: 1rem;
     color: rgba(255, 255, 255, 0.8);
 }
+
 .footer_copy {
     font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.6);
 }
 
-/* History Main Styles */
+/* 역사 메인 컨테이너 */
 .history_container {
     margin-top: 150px;
     margin-bottom: 80px;
@@ -108,6 +116,7 @@ body {
     width: 100%;
 }
 
+/* 대제목 */
 .history_title {
     font-family: 'Black Han Sans', serif;
     font-size: 60px;
@@ -115,6 +124,7 @@ body {
     margin-bottom: 10px;
 }
 
+/* 소제목 */
 .history_subtitle {
     font-family: 'Hahmlet', serif;
     font-size: 20px;
@@ -122,7 +132,7 @@ body {
     margin-bottom: 50px;
 }
 
-/* Timeline Container */
+/* 타임라인 섹션 뼈대 */
 .timeline_section {
     position: relative;
     width: 98%;
@@ -130,7 +140,7 @@ body {
     margin: 0 auto;
 }
 
-/* White Bar (하얀 막대기) */
+/* 타임라인 정중앙 세로축 흰 선 */
 .timeline_line {
     position: absolute;
     left: 50%;
@@ -142,7 +152,7 @@ body {
     z-index: 1;
 }
 
-/* History Box Wrapper */
+/* 타임라인 박스 공통 구조 (반씩 노나 가짐) */
 .history_box {
     position: relative;
     width: 50%;
@@ -150,17 +160,19 @@ body {
     box-sizing: border-box;
 }
 
+/* 홀수 번째는 왼쪽 배치 및 우측 정렬 */
 .history_box.left {
     left: 0;
     text-align: right;
 }
 
+/* 짝수 번째는 오른쪽 배치 및 좌측 정렬 */
 .history_box.right {
     left: 50%;
     text-align: left;
 }
 
-/* History Card Content */
+/* 역사 설명 카드 */
 .history_card {
     background-color: rgba(0, 0, 0, 0.4);
     border: 2px solid white;
@@ -169,7 +181,7 @@ body {
     color: white;
 }
 
-/* Dot on the Line */
+/* 세로선 상에 올라갈 둥근 도트 마커 */
 .history_dot {
     position: absolute;
     top: 100px;
@@ -181,6 +193,7 @@ body {
     z-index: 10;
 }
 
+/* 도트 마커 가로 위치 보정 */
 .history_box.left .history_dot {
     right: -8px;
 }
@@ -189,6 +202,7 @@ body {
     left: -8px;
 }
 
+/* 역사 년도/시대 텍스트 */
 .history_year {
     font-family: 'Bagel Fat One', cursive;
     font-size: 30px;
@@ -196,18 +210,21 @@ body {
     margin-bottom: 10px;
 }
 
+/* 역사 토픽 타이틀 */
 .history_name {
     font-family: 'Black Han Sans', serif;
     font-size: 24px;
     margin-bottom: 15px;
 }
 
+/* 역사 세부정보 본문 */
 .history_info {
     font-family: 'Hahmlet', serif;
     font-size: 18px;
     line-height: 1.6;
 }
 
+/* 역사 카드 내부 이미지 */
 .history_img {
     width: 100%;
     height: 450px;

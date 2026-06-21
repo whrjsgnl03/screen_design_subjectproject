@@ -1,3 +1,4 @@
+/* 동글 폰트 가져오기 */
 @import url("https://fonts.googleapis.com/css2?family=Dongle&display=swap");
 
 .dongle-regular {
@@ -6,10 +7,12 @@
     font-style: normal;
 }
 
+/* 초록색 계열 배경 그라데이션 */
 body {
     background: linear-gradient(to left, #00944d, #00944ce9, #00944c76);
 }
 
+/* 왼쪽 텍스트 로고 절대배치 */
 #source img{
     object-fit: contain;
     position: absolute;
@@ -19,6 +22,8 @@ body {
     height: 10%;
     transform: translate(-50%, -50%);
 }
+
+/* 가운데 심볼 로고 절대배치 */
 #logo img{
     object-fit: contain;
     position: absolute;
@@ -28,6 +33,8 @@ body {
     height: 10%;
     transform: translate(-50%, -50%);
 }
+
+/* 오른쪽 꿈돌이/꿈순이 절대배치 (포인터 이벤트 차단해서 다른 링크 가리지 않게 처리) */
 #mascot img{
     object-fit: contain;
     position: absolute;
@@ -36,12 +43,16 @@ body {
     width: 60%;   
     height: 60%;
     transform: translate(-50%, -50%);
+    pointer-events: none;
 }
 
+/* 텍스트 로고 마우스 호버 효과 */
 #source img:hover {
     background-color: rgba(0, 0, 0, 0);
     transition: all 1s ease;
 }
+
+/* 지도 기본 배치 스타일 */
 .map {
     position: absolute;
     left: 50%;

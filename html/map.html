@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>대전광역시 - 지도</title>
+    <!-- 지도 페이지 전용 스타일시트 연결 -->
     <link rel="stylesheet" href="../css/map.css">
 </head>
 <body>
+    <!-- 상단 헤더 영역 -->
     <header role="banner">
         <a href="main.html" id="logo">
             <img src="../source/logo.png" alt="대전광역시 로고" class="image">
@@ -20,11 +22,16 @@
         <a class="text-button" id="map" href="map.html">지도</a>
         <a class="text-button" id="festival" href="festival.html">축제</a>
     </header>
+
+    <!-- 지도 표시 구역 -->
     <div class="map" id="inf">
         <h2 class="map-title">대전광역시 살펴보기</h2>
+        <!-- 구글 지도 임베드 iframe -->
         <iframe class="map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d70000!2d127.23810292941579!3d36.34182935092089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356548d7ba4a6601%3A0xd196d69d988ad3b5!2z64yA7KCE6rSR7Jet7Iuc!5e1!3m2!1sko!2skr!4v1780384804439!5m2!1sko!2skr" width="100%" height="1000" style="border:0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
         </iframe>
     </div>
+
+    <!-- 하단 푸터 영역 -->
     <footer class="footer">
         <div class="footer_links">이용안내 | 개인정보처리방침 | 저작권 안내 | 사진사용규정</div>
         <div class="footer_info">(34111) 대전광역시 유성구 가정북로 76 대덕소프트웨어마이스터고등학교</div>

@@ -1,14 +1,16 @@
+/* 외부 웹 폰트(Hahmlet, Black Han Sans, Bagel Fat One) 로드 */
 @import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap');
 
+/* 마진, 패딩 리셋 및 박스사이징 설정 */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* 기본 레이아웃 */
+/* 바디 레이아웃 & 초록 배경 그라데이션 */
 body {
     background: linear-gradient(to left, #00944d, #00944ce9, #00944c76);
     z-index: -1;
@@ -17,7 +19,7 @@ body {
     flex-direction: column;
 }
 
-/* 공통 헤더 */
+/* 공통 헤더 바 영역 스타일 */
 body header {
     width: 100%;
     height: 90px;
@@ -30,6 +32,8 @@ body header {
     z-index: 100;
     background-color: rgba(0, 0, 0, 0.356);
 }
+
+/* 헤더 심볼 로고 배치 */
 #logo img {
     object-fit: contain;
     position: absolute;
@@ -39,6 +43,8 @@ body header {
     height: 20%;
     transform: translate(-50%, -50%);
 }
+
+/* 헤더 텍스트 로고 배치 */
 #name img {
     object-fit: contain;
     position: absolute;
@@ -48,6 +54,8 @@ body header {
     height: 20%;
     transform: translate(-50%, -50%);
 }
+
+/* 네비게이션용 버튼 공통 스타일 */
 .text-button {
     text-decoration: none;
     position: absolute;
@@ -57,6 +65,8 @@ body header {
     color: white;
     font-family: 'Hahmlet', serif;
 }
+
+/* 각 서브페이지 이동 버튼들의 가로 정렬 위치 */
 #history { left: 60%; }
 #restaurants { left: 67%; }
 #tour { left: 74%; }
@@ -64,7 +74,7 @@ body header {
 #map { left: 88%; }
 #shopping { left: 95%; }
 
-/* 축제 컨테이너 및 텍스트 */
+/* 축제 컨텐츠 메인 컨테이너 */
 .festival_container {
     margin-top: 130px;
     width: 100%;
@@ -74,6 +84,8 @@ body header {
     align-items: center;
     flex: 1;
 }
+
+/* 대타이틀 */
 .festival_title {
     font-family: 'Black Han Sans', serif;
     font-size: 60px;
@@ -81,6 +93,8 @@ body header {
     margin-bottom: 10px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
+
+/* 서브타이틀 */
 .festival_subtitle {
     font-family: 'Hahmlet', serif;
     font-size: 20px;
@@ -89,18 +103,17 @@ body header {
     text-align: center;
 }
 
-/* 3x3 카드 그리드 (CSS Grid) */
+/* 3열 카드형 격자 배치 (CSS Grid) */
 .festival_grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
     width: 95%;
     max-width: 1400px;
-    max-height: 2000px;
     margin-bottom: 60px;
 }
 
-/* 카드 개별 스타일 */
+/* 축제 카드 개별 스타일 */
 .festival_card {
     background-color: rgba(0, 0, 0, 0.4);
     border: 2px solid white;
@@ -110,16 +123,16 @@ body header {
     flex-direction: column;
 }
 
-/* 카드 이미지 */
+/* 카드 이미지 클리핑 및 가득 채우기 */
 .card_img {
     width: 100%;
-    height: 350px;
+    height: 280px;
     object-fit: contain;
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: rgba(0, 0, 0, 0.2);
     border-bottom: 2px solid white;
 }
 
-/* 카드 내부 텍스트 구역 */
+/* 카드 내부 텍스트 감싸는 박스 */
 .card_body {
     padding: 25px;
     color: white;
@@ -127,12 +140,26 @@ body header {
     flex-direction: column;
     flex: 1;
 }
+
+/* 축제 타이틀 텍스트 */
 .card_title {
     font-family: 'Black Han Sans', serif;
     font-size: 28px;
     color: #EFD2A8;
     margin-bottom: 10px;
 }
+
+/* 축제 타이틀 내부 링크 꾸미기 */
+.card_title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.card_title a:hover {
+    text-decoration: underline;
+}
+
+/* 축제 기간 텍스트 */
 .card_date {
     font-family: 'Hahmlet', serif;
     font-size: 16px;
@@ -140,6 +167,8 @@ body header {
     margin-bottom: 15px;
     font-weight: bold;
 }
+
+/* 축제 설명 상세 본문 */
 .card_desc {
     font-family: 'Hahmlet', serif;
     font-size: 16px;
@@ -147,7 +176,7 @@ body header {
     color: rgba(255, 255, 255, 0.95);
 }
 
-/* 공통 푸터 */
+/* 공통 하단 푸터 */
 .footer {
     position: relative;
     z-index: 50;
@@ -160,15 +189,18 @@ body header {
     line-height: 2;
     padding: 40px 0;
 }
+
 .footer_links {
     font-weight: bold;
     margin-bottom: 10px;
     color: white;
 }
+
 .footer_info {
     font-size: 1rem;
     color: rgba(255, 255, 255, 0.8);
 }
+
 .footer_copy {
     font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.6);

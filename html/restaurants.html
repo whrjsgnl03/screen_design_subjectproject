@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>대전광역시 - 맛집</title>
+    <!-- 맛집 페이지 전용 CSS 스타일시트 연결 -->
     <link rel="stylesheet" href="../css/restaurants.css">
 </head>
 <body>
+    <!-- 상단 네비게이션 헤더 바 -->
     <header role="banner">
         <a href="main.html" id="logo">
             <img src="../source/logo.png" alt="대전광역시 로고" class="image">
@@ -21,11 +23,12 @@
         <a class="text-button" id="festival" href="festival.html">축제</a>
     </header>
 
+    <!-- 맛집 소개 메인 레이아웃 -->
     <main class="matjib_box">
         <h1 class="restaurants_title">대전의 맛집</h1>
         <p class="restaurants_subtitle">대전의 맛집들을 확인해보세요</p>
 
-        <!-- 맛집 스크롤 박스 -->
+        <!-- 맛집 세로 스크롤 카드 담는 상자 -->
         <div class="scroll_box">
             
             <!-- 1. 성심당 -->
@@ -174,8 +177,12 @@
             
         </div>
     </main>
+
+    <!-- 구글 지도 임베드 구역 -->
     <h1 class="map_title">맛집 위치 확인하기</h1>
-<iframe class="map-iframe" src="https://www.google.com/maps/d/u/0/embed?mid=16B_rv4WQmamyRH7BX_1W7BEAXMcmre8&ehbc=2E312F" width="50%" height="800"></iframe>
+    <iframe class="map-iframe" src="https://www.google.com/maps/d/u/0/embed?mid=16B_rv4WQmamyRH7BX_1W7BEAXMcmre8&ehbc=2E312F" width="50%" height="800"></iframe>
+
+    <!-- 하단 푸터 영역 -->
     <footer class="footer">
         <div class="footer_links">이용안내 | 개인정보처리방침 | 저작권 안내 | 사진사용규정</div>
         <div class="footer_info">(34111) 대전광역시 유성구 가정북로 76 대덕소프트웨어마이스터고등학교</div>

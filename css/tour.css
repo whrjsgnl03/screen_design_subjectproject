@@ -1,13 +1,16 @@
+/* 구글 웹폰트 가져오기 */
 @import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap');
 
+/* 마진, 패딩 여백 초기화 */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* 상단 고정 네비게이션 헤더 바 */
 body header {
     width: 100%;
     height: 90px;
@@ -25,18 +28,16 @@ body header div {
     color: rgb(255, 255, 255);
 }
 
+/* 바디 레이아웃 & 배경 초록 그라데이션 */
 body {
     background: linear-gradient(to left, #00944d, #00944ce9, #00944c76);
     z-index: -1;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    -webkit-user-select: none; /* 사파리, 크롬 */
-    -moz-user-select: none;    /* 파이어폭스 */
-    -ms-user-select: none; /* 인터넷 익스플로러 */
-    user-select: none;        /* 표준 */
 }
 
+/* 헤더 심볼 로고 */
 #logo img {
     object-fit: contain;
     position: absolute;
@@ -47,6 +48,7 @@ body {
     transform: translate(-50%, -50%);
 }
 
+/* 헤더 텍스트 로고 */
 #name img {
     object-fit: contain;
     position: absolute;
@@ -57,36 +59,26 @@ body {
     transform: translate(-50%, -50%);
 }
 
+/* 메뉴 버튼 공통 스타일 */
 .text-button {
     text-decoration: none;
     position: absolute;
     top: 48%;
     transform: translate(-50%, -50%);
-    font-size: 24px;
+    font-size: 1.5rem;
     color: white;
     font-family: 'Hahmlet', serif;
 }
 
-#history {
-    left: 60%;
-}
-#restaurants {
-    left: 67%;
-}
-#tour {
-    left: 74%;
-}
-#festival {
-    left: 81%;
-}
-#map {
-    left: 88%;
-}
-#shopping {
-    left: 95%;
-}
+/* 각 서브메뉴 가로 정렬 위치 */
+#history { left: 60%; }
+#restaurants { left: 67%; }
+#tour { left: 74%; }
+#festival { left: 81%; }
+#map { left: 88%; }
+#shopping { left: 95%; }
 
-/* 맛집 컨테이너 및 타이틀 */
+/* 숙박 소개 전체 메인 컨테이너 */
 .matjib_box {
     margin-top: 130px;
     margin-bottom: 60px;
@@ -98,6 +90,7 @@ body {
     flex: 1;
 }
 
+/* 대제목 */
 .restaurants_title {
     font-family: 'Black Han Sans', serif;
     font-size: 60px;
@@ -106,6 +99,7 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+/* 소제목 */
 .restaurants_subtitle {
     font-family: 'Hahmlet', serif;
     font-size: 20px;
@@ -114,116 +108,127 @@ body {
     text-align: center;
 }
 
-/* 스크롤 박스 영역 */
+/* 숙박 목록 세로 스크롤 되는 박스 */
 .scroll_box {
     border: 2px solid #FFFFFF;
-    width: 100%;
-    max-width: 100%;
+    width: 95%;
+    max-width: 1400px;
     height: 900px;
     overflow-y: auto;
     padding-right: 20px;
     padding-left: 20px;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.15);
 }
 
-/* 스크롤바 디자인 변경 */
+/* 크롬 브라우저 스크롤바 너비 */
 .scroll_box::-webkit-scrollbar {
     width: 8px;
 }
 
+/* 스크롤바 뒷배경 레이아웃 */
 .scroll_box::-webkit-scrollbar-track {
     background: rgba(255, 255, 255, 0.08);
     border-radius: 10px;
 }
 
+/* 스크롤바 움직이는 영역 */
 .scroll_box::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.3);
     border-radius: 10px;
     transition: background-color 0.3s;
 }
 
+/* 스크롤바 마우스 오버 효과 */
 .scroll_box::-webkit-scrollbar-thumb:hover {
     background: rgba(255, 255, 255, 0.5);
 }
 
-/* 오노마 호텔 카드 */
+/* 호텔 카드 개별 컨테이너 스타일 (1. 오노마) */
 .onoma2 {
     display: flex;
     background-color: rgba(0, 0, 0, 0.4);
     border: 2px solid white;
     border-radius: 15px;
+    margin-top: 25px;
     margin-bottom: 25px;
     overflow: hidden;
     opacity: 1;
 }
 
-/* 롯데시티호텔 카드 */
+/* 호텔 카드 개별 컨테이너 스타일 (2. 롯데시티) */
 .lotte2 {
     display: flex;
     background-color: rgba(0, 0, 0, 0.4);
     border: 2px solid white;
     border-radius: 15px;
+    margin-top: 25px;
     margin-bottom: 25px;
     overflow: hidden;
     opacity: 1;
 }
 
-/* 라마다호텔 카드 */
+/* 호텔 카드 개별 컨테이너 스타일 (3. 라마다) */
 .ramada2 {
     display: flex;
     background-color: rgba(0, 0, 0, 0.4);
     border: 2px solid white;
     border-radius: 15px;
+    margin-top: 25px;
     margin-bottom: 25px;
     overflow: hidden;
     opacity: 1;
 }
 
-/* 토요코인 카드 */
+/* 호텔 카드 개별 컨테이너 스타일 (4. 토요코인) */
 .toyoko2 {
     display: flex;
     background-color: rgba(0, 0, 0, 0.4);
     border: 2px solid white;
     border-radius: 15px;
+    margin-top: 25px;
     margin-bottom: 25px;
     overflow: hidden;
     opacity: 1;
 }
 
-/* 인터시티호텔 카드 */
+/* 호텔 카드 개별 컨테이너 스타일 (5. 인터시티) */
 .interciti2 {
     display: flex;
     background-color: rgba(0, 0, 0, 0.4);
     border: 2px solid white;
     border-radius: 15px;
+    margin-top: 25px;
     margin-bottom: 25px;
     overflow: hidden;
     opacity: 1;
 }
 
-/* 호텔라온 카드 */
+/* 호텔 카드 개별 컨테이너 스타일 (6. 라온) */
 .laon2 {
     display: flex;
     background-color: rgba(0, 0, 0, 0.4);
     border: 2px solid white;
     border-radius: 15px;
+    margin-top: 25px;
     margin-bottom: 25px;
     overflow: hidden;
     opacity: 1;
 }
 
-/* 경하온천호텔 카드 */
+/* 호텔 카드 개별 컨테이너 스타일 (7. 경하온천) */
 .gyeongha2 {
     display: flex;
     background-color: rgba(0, 0, 0, 0.4);
     border: 2px solid white;
     border-radius: 15px;
+    margin-top: 25px;
     margin-bottom: 25px;
     overflow: hidden;
     opacity: 1;
 }
 
-
-/* 카드 이미지 감싸개 */
+/* 카드 내 왼쪽 이미지 감싸는 박스 */
 .img_wrap {
     width: 38%;
     height: 320px;
@@ -232,7 +237,7 @@ body {
     border-right: 2px solid rgba(255, 255, 255, 0.2);
 }
 
-/* 맛집 이미지 */
+/* 이미지 비율 채우기 속성 */
 .res_img {
     width: 100%;
     height: 100%;
@@ -240,7 +245,7 @@ body {
     background-color: rgba(0, 0, 0, 0.15);
 }
 
-/* 카드 내 오른쪽 글씨 구역 */
+/* 카드 내 오른쪽 텍스트 정렬 상자 */
 .text_box {
     width: 62%;
     padding: 30px;
@@ -256,199 +261,111 @@ body {
     margin-bottom: 8px;
 }
 
-/* 1. 오노마 호텔 이름 */
+/* 호텔 개별 이름 폰트 및 고유의 포인트 컬러 매칭 */
 .one_one {
     font-family: 'Bagel Fat One', cursive;
     font-size: 37px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    color: #EFD2A8;
+    color: #EFD2A8; /* 오노마: 베이지 골드 */
 }
 
-/* 2. 롯데시티호텔 이름 */
 .two_one {
     font-family: 'Bagel Fat One', cursive;
     font-size: 37px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    color: #FFAB91;
+    color: #FFAB91; /* 롯데시티: 주황 */
 }
 
-/* 3. 라마다호텔 이름 */
 .three_one {
     font-family: 'Bagel Fat One', cursive;
     font-size: 37px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    color: #81D4FA;
+    color: #81D4FA; /* 라마다: 하늘 */
 }
 
-/* 4. 토요코인 이름 */
 .four_one {
     font-family: 'Bagel Fat One', cursive;
     font-size: 37px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    color: #FFE082;
+    color: #FFE082; /* 토요코인: 노랑 */
 }
 
-/* 5. 인터시티호텔 이름 */
 .five_one {
     font-family: 'Bagel Fat One', cursive;
     font-size: 37px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    color: #FF8A80;
+    color: #FF8A80; /* 인터시티: 다홍 */
 }
 
-/* 6. 호텔라온 이름 */
 .six_one {
     font-family: 'Bagel Fat One', cursive;
     font-size: 37px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    color: #FFD54F;
+    color: #A5D6A7; /* 라온: 민트 */
 }
 
-/* 7. 경하온천호텔 이름 */
 .seven_one {
     font-family: 'Bagel Fat One', cursive;
     font-size: 37px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    color: #A5D6A7;
+    color: #CE93D8; /* 경하: 보라 */
 }
 
-
-/* 1. 성심당 접미사 */
-.one_two {
+/* 호텔 이름 뒤 접미사 스타일 공통 */
+.one_two, .two_two, .three_two, .four_two, .five_two, .six_two, .seven_two {
     font-family: 'Black Han Sans', serif;
     font-size: 21px;
     color: white;
     margin-left: 10px;
 }
 
-/* 2. 광천식당 접미사 */
-.two_two {
-    font-family: 'Black Han Sans', serif;
-    font-size: 21px;
-    color: white;
-    margin-left: 10px;
-}
-
-/* 3. 오씨칼국수 접미사 */
-.three_two {
-    font-family: 'Black Han Sans', serif;
-    font-size: 21px;
-    color: white;
-    margin-left: 10px;
-}
-
-/* 4. 태평소국밥 접미사 */
-.four_two {
-    font-family: 'Black Han Sans', serif;
-    font-size: 21px;
-    color: white;
-    margin-left: 10px;
-}
-
-/* 5. 진로집 접미사 */
-.five_two {
-    font-family: 'Black Han Sans', serif;
-    font-size: 21px;
-    color: white;
-    margin-left: 10px;
-}
-
-/* 6. 바로그집 접미사 */
-.six_two {
-    font-family: 'Black Han Sans', serif;
-    font-size: 21px;
-    color: white;
-    margin-left: 10px;
-}
-
-/* 7. 신도칼국수 접미사 */
-.seven_two {
-    font-family: 'Black Han Sans', serif;
-    font-size: 21px;
-    color: white;
-    margin-left: 10px;
-}
-
-
-/* 카테고리 텍스트 */
+/* 분류 카테고리 태그 텍스트 */
 .cat_text {
-    font-family: 'Black Han Sans', serif;
+    font-family: 'Hahmlet', serif;
     font-size: 16px;
     color: rgba(255, 255, 255, 0.6);
-    margin-bottom: 12px;
+    margin-bottom: 8px;
+    font-weight: bold;
 }
 
-/* 메뉴 텍스트 */
+/* 대표 혜택/정보 스타일 (노란색 강조) */
 .menu_text {
     font-family: 'Hahmlet', serif;
-    font-size: 15px;
-    font-weight: 700;
-    color: #d0d0d0;
-    background-color: rgba(255, 255, 255, 0.08);
-    padding: 6px 14px;
-    border-radius: 0px;
-    align-self: flex-start;
+    font-size: 17px;
+    color: #FFD54F;
     margin-bottom: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-weight: bold;
 }
 
-/* 1. 성심당 설명 */
-.one_three {
+/* 카드 본문 설명 공통 */
+.one_three, .two_three, .three_three, .four_three, .five_three, .six_three, .seven_three {
     font-family: 'Hahmlet', serif;
-    font-size: 17px;
+    font-size: 16px;
     line-height: 1.6;
-    color: rgba(255, 255, 255, 0.95);
+    color: rgba(255, 255, 255, 0.9);
 }
 
-/* 2. 광천식당 설명 */
-.two_three {
-    font-family: 'Hahmlet', serif;
-    font-size: 17px;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.95);
+/* 구글 지도 영역 제목 */
+.map_title {
+    font-family: 'Black Han Sans', serif;
+    font-size: 45px;
+    color: white;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* 3. 오씨칼국수 설명 */
-.three_three {
-    font-family: 'Hahmlet', serif;
-    font-size: 17px;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.95);
+/* 지도 iframe 레이아웃 */
+.map-iframe {
+    display: block;
+    margin: 0 auto 60px auto;
+    border: 2px solid white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
-/* 4. 태평소국밥 설명 */
-.four_three {
-    font-family: 'Hahmlet', serif;
-    font-size: 17px;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.95);
-}
-
-/* 5. 진로집 설명 */
-.five_three {
-    font-family: 'Hahmlet', serif;
-    font-size: 17px;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.95);
-}
-
-/* 6. 바로그집 설명 */
-.six_three {
-    font-family: 'Hahmlet', serif;
-    font-size: 17px;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.95);
-}
-
-/* 7. 신도칼국수 설명 */
-.seven_three {
-    font-family: 'Hahmlet', serif;
-    font-size: 17px;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.95);
-}
-
-
+/* 하단 푸터 영역 스타일 */
 .footer {
     position: relative;
     z-index: 50;
@@ -457,34 +374,23 @@ body {
     text-align: center;
     color: white;
     font-family: 'Hahmlet', serif;
-    font-size: 19px;
+    font-size: 1.2rem;
     line-height: 2;
     padding: 40px 0 40px 0;
 }
+
 .footer_links {
     font-weight: bold;
     margin-bottom: 10px;
     color: white;
 }
+
 .footer_info {
-    font-size: 16px;
+    font-size: 1rem;
     color: rgba(255, 255, 255, 0.8);
 }
+
 .footer_copy {
-    font-size: 14px;
+    font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.6);
-}
-.map_title {
-    margin-top: 50px;
-    color: #ffffff;
-    font-family: 'Black Han Sans', serif;
-    font-size: 50px;
-    text-align: center;
-}
-.map-iframe {
-    position: relative;
-    left: 450px;
-    border-radius: 30px;
-    margin-bottom: 60px;
-    margin-top: 20px;
 }

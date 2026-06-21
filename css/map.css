@@ -1,10 +1,15 @@
+/* 외부 폰트 파일 가져오기 */
 @import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+
+/* 마진, 패딩 여백 0으로 초기화 */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+/* 상단 네비게이션 헤더 바 */
 body header {
     width: 100%;
     height: 90px;
@@ -17,9 +22,12 @@ body header {
     z-index: 100;
     background-color: rgba(0, 0, 0, 0.356);
 }
+
 body header div {
     color: rgb(255, 255, 255);
 }
+
+/* 바디 배경 그라데이션 및 레이아웃 */
 body {
     background: linear-gradient(to left, #00944d, #00944ce9, #00944c76);
     z-index: -1;
@@ -27,6 +35,8 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+/* 헤더 심볼 로고 */
 #logo img {
     object-fit: contain;
     position: absolute;
@@ -36,6 +46,8 @@ body {
     height: 20%;
     transform: translate(-50%, -50%);
 }
+
+/* 헤더 텍스트 로고 */
 #name img {
     object-fit: contain;
     position: absolute;
@@ -45,6 +57,8 @@ body {
     height: 20%;
     transform: translate(-50%, -50%);
 }
+
+/* 메뉴 버튼 공통 서식 */
 .text-button {
     text-decoration: none;
     position: absolute;
@@ -54,24 +68,16 @@ body {
     color: white;
     font-family: 'Hahmlet', serif;
 }
-#history {
-    left: 60%;
-}
-#restaurants {
-    left: 67%;
-}
-#tour {
-    left: 74%;
-}
-#festival {
-    left: 81%;
-}
-#map {
-    left: 88%;
-}
-#shopping {
-    left: 95%;
-}
+
+/* 메뉴별 가로 위치 배정 */
+#history { left: 60%; }
+#restaurants { left: 67%; }
+#tour { left: 74%; }
+#festival { left: 81%; }
+#map { left: 88%; }
+#shopping { left: 95%; }
+
+/* 메인 대제목 글자 스타일 */
 .main-title {
     position: absolute;
     top: 50%;
@@ -82,22 +88,29 @@ body {
     font-size: 100px; 
     white-space: nowrap;
 }
+
+/* 지도 타이틀 레이아웃 배치 */
 .map-title {
     position: absolute;
     align-items: center;
     justify-content: center;
 }
-.map-title{
+
+/* 지도 대제목 글자 스타일 */
+.map-title {
     color: white;
     font-family: 'Black Han Sans', serif;
     font-size: 50px;
     margin-top: 0px;
     margin-left: 1370px;
 }
+
+/* 지도 아이프레임 */
 .map-iframe {
     margin-bottom: 0;
 }
 
+/* 하단 푸터 스타일 */
 .footer {
     position: relative;
     z-index: 50;
@@ -110,24 +123,30 @@ body {
     line-height: 2;
     padding: 40px 0 40px 0;
 }
+
 .footer_links {
     font-weight: bold;
     margin-bottom: 10px;
     color: white;
 }
+
 .footer_info {
     font-size: 1rem;
     color: rgba(255, 255, 255, 0.8);
 }
+
 .footer_copy {
     font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.6);
 }
+
+/* 맵 타이틀 절대배치 */
 .map_title {
     position: absolute;
     transform: translate(-50%, -50%);
 }
 
+/* 지도 구역 상단 여백 설정 */
 .map {
     margin-top: 95px;
     margin-bottom: 0px;

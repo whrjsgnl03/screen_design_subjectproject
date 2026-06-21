@@ -1,25 +1,35 @@
+/* 외부 폰트 파일 가져오기 */
 @import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap');
+
+/* 마진 패딩 기본화 및 박스사이징 */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
     scroll-behavior: smooth;
 }
+
+/* 이미지 자동 슬라이더 상자 */
 .slider-wrapper {
     display: flex;
     width: 1000%;
     height: 100%;
     animation: daejeonSlide 30s infinite ease-in-out;
 }
+
+/* 슬라이더 이미지 개별 비율 채우기 */
 .main-image {
     width: 10%;
     height: 100%;
     object-fit: cover;
 }
+
+/* 슬라이더가 얹어지는 메인 컨테이너 */
 .main {
     left: 50%;
     width: 100%;   
@@ -28,6 +38,8 @@ html {
     overflow: hidden;
     position: relative;
 }
+
+/* 상단 메뉴바 공통 스타일 */
 body header {
     width: 100%;
     height: 90px;
@@ -38,9 +50,12 @@ body header {
     z-index: 100;
     background-color: rgba(0, 0, 0, 0.356);
 }
+
 body header div {
     color: rgb(255, 255, 255);
 }
+
+/* 메인 배너 슬라이드 애니메이션 (10장 전환용) */
 @keyframes daejeonSlide {
     0%, 8%     { transform: translateX(0); }
     10%, 18%   { transform: translateX(-10%); }
@@ -54,17 +69,21 @@ body header div {
     90%, 98%   { transform: translateX(-90%); }
     100%       { transform: translateX(-90%); }
 }
+
+/* 바디 전체 속성 및 마우스 드래그 금지 처리 */
 body {
     background: linear-gradient(to left, #00944d, #00944ce9, #00944c76);
     z-index: -1;
     min-height: 420vh;
     display: flex;
     flex-direction: column;
-    -webkit-user-select: none; /* 사파리, 크롬 */
-    -moz-user-select: none;    /* 파이어폭스 */
-    -ms-user-select: none; /* 인터넷 익스플로러 */
-    user-select: none;        /* 표준 */
+    -webkit-user-select: none; /* 사파리, 크롬 드래그 방지 */
+    -moz-user-select: none;    /* 파이어폭스 드래그 방지 */
+    -ms-user-select: none;     /* IE 드래그 방지 */
+    user-select: none;        /* 표준 드래그 방지 */
 }
+
+/* 로고 배치 */
 #logo img {
     object-fit: contain;
     position: absolute;
@@ -74,6 +93,8 @@ body {
     height: 20%;
     transform: translate(-50%, -50%);
 }
+
+/* 텍스트 로고 배치 */
 #name img {
     object-fit: contain;
     position: absolute;
@@ -83,6 +104,8 @@ body {
     height: 20%;
     transform: translate(-50%, -50%);
 }
+
+/* 상단 버튼들 */
 .text-button {
     text-decoration: none;
     position: absolute;
@@ -92,24 +115,15 @@ body {
     color: white;
     font-family: 'Hahmlet', serif;
 }
-#history {
-    left: 60%;
-}
-#restaurants {
-    left: 67%;
-}
-#tour {
-    left: 74%;
-}
-#festival {
-    left: 81%;
-}
-#map {
-    left: 88%;
-}
-#shopping {
-    left: 95%;
-}
+
+#history { left: 60%; }
+#restaurants { left: 67%; }
+#tour { left: 74%; }
+#festival { left: 81%; }
+#map { left: 88%; }
+#shopping { left: 95%; }
+
+/* 메인 배너의 타이틀 글자 */
 .main-title {
     position: absolute;
     top: 50%;
@@ -120,22 +134,29 @@ body {
     font-size: 100px; 
     white-space: nowrap;
 }
+
+/* 대전 타이틀 글자 데코 */
 .deajeon_is1 {
     color: white;
     font-family: 'Bagel Fat One', cursive;
     font-size: 200px;
     transform: translate(05%, -50%);
 }
+
 .deajeon_is2 {
     color: white;
     font-family: 'Black Han Sans', serif;
     font-size: 70px;
     transform: translate(25%, -295%);
 }
+
+/* 외부 날씨 위젯 정렬 */
 #ww_dde730d6d6110 {
     position: absolute;
     transform: translate(285%, -160%);
 }
+
+/* 성심당 카드 배경 이미지 절대배치 */
 .sungsimdang {
     z-index: -10000;
     position: absolute;
@@ -145,18 +166,22 @@ body {
     height: 50%;
     transform: translate(-97%, 70%);
 }
+
+/* 성심당 상세 텍스트 및 위치 강제 디스플레이스 */
 .one_one {
     color: #EFD2A8;
     font-family: 'Bagel Fat One', cursive;
     font-size: 90px;
     transform: translate(65%, -100%);
 }
+
 .one_two {
     color: white;
     font-family: 'Black Han Sans', serif;
     font-size: 40px;
     transform: translate(78%, -380%);
 }
+
 .one_three {
     text-align: center;
     color: white;
@@ -164,9 +189,13 @@ body {
     font-size: 3rem;
     transform: translate(25%, -50%);
 }
+
+/* 대전역 야경 상단 마진 */
 .daejeonyagyeong2 {
     margin-top: 60vh;
 }
+
+/* 대전역 배경 이미지 절대배치 */
 .daejeonyagyeong {
     z-index: -10000;
     position: absolute;
@@ -176,18 +205,22 @@ body {
     height: 50%;
     transform: translate(-3%, 190%);
 }
+
+/* 대전역 타이틀 & 본문 위치 */
 .two_one {
     color: #61666A;
     font-family: 'Bagel Fat One', cursive;
     font-size: 90px;
     transform: translate(10%, -300%);
 }
+
 .two_two {
     color: white;
     font-family: 'Black Han Sans', serif;
     font-size: 40px;
     transform: translate(23.5%, -900%);
 }
+
 .two_three {
     text-align: center;
     color: white;
@@ -195,17 +228,13 @@ body {
     font-size: 3rem;
     transform: translate(-25%, -300%);
 }
-/* .map {
-    position: absolute;
-    left: 50%;
-    top: 100%;
-    width: 100%;
-    height: 500px;
-} */
 
+/* 오월드 영역 상단 마진 */
 .oworld2 {
     margin-top: 60vh;
 }
+
+/* 오월드 배경 이미지 절대배치 */
 .oworld {
     z-index: -10000;
     position: absolute;
@@ -215,18 +244,22 @@ body {
     height: 50%;
     transform: translate(-97%, 310%);
 }
+
+/* 오월드 타이틀 및 본문 정렬 */
 .three_one {
     color: #FFE082;
     font-family: 'Bagel Fat One', cursive;
     font-size: 90px;
     transform: translate(65%, -530%);
 }
+
 .three_two {
     color: white;
     font-family: 'Black Han Sans', serif;
     font-size: 40px;
     transform: translate(78%, -1515%);
 }
+
 .three_three {
     text-align: center;
     color: white;
@@ -235,9 +268,12 @@ body {
     transform: translate(25%, -390%);
 }
 
+/* 엑스포 구역 상단 마진 */
 .expo2 {
     margin-top: 60vh;
 }
+
+/* 엑스포 이미지 절대배치 */
 .expo {
     z-index: -10000;
     position: absolute;
@@ -247,18 +283,22 @@ body {
     height: 50%;
     transform: translate(-3%, 430%);
 }
+
+/* 엑스포 텍스트 정렬 */
 .four_one {
     color: #81D4FA;
     font-family: 'Bagel Fat One', cursive;
     font-size: 90px;
     transform: translate(14%, -790%);
 }
+
 .four_two {
     color: white;
     font-family: 'Black Han Sans', serif;
     font-size: 40px;
     transform: translate(27%, -2198%);
 }
+
 .four_three {
     text-align: center;
     color: white;
@@ -267,6 +307,7 @@ body {
     transform: translate(-25%, -430%);
 }
 
+/* 하단 푸터 영역 스타일 */
 .footer {
     position: relative;
     z-index: 50;
@@ -279,15 +320,18 @@ body {
     line-height: 2;
     padding: 40px 0 40px 0;
 }
+
 .footer_links {
     font-weight: bold;
     margin-bottom: 10px;
     color: white;
 }
+
 .footer_info {
     font-size: 1rem;
     color: rgba(255, 255, 255, 0.8);
 }
+
 .footer_copy {
     font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.6);
