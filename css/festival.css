@@ -1,9 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+/* 기본 레이아웃 */
+body {
+    background: linear-gradient(to left, #00944d, #00944ce9, #00944c76);
+    z-index: -1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 공통 헤더 */
 body header {
     width: 100%;
     height: 90px;
@@ -15,16 +29,6 @@ body header {
     left: 0;
     z-index: 100;
     background-color: rgba(0, 0, 0, 0.356);
-}
-body header div {
-    color: rgb(255, 255, 255);
-}
-body {
-    background: linear-gradient(to left, #00944d, #00944ce9, #00944c76);
-    z-index: -1;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
 }
 #logo img {
     object-fit: contain;
@@ -53,25 +57,97 @@ body {
     color: white;
     font-family: 'Hahmlet', serif;
 }
-#history {
-    left: 60%;
+#history { left: 60%; }
+#restaurants { left: 67%; }
+#tour { left: 74%; }
+#festival { left: 81%; }
+#map { left: 88%; }
+#shopping { left: 95%; }
+
+/* 축제 컨테이너 및 텍스트 */
+.festival_container {
+    margin-top: 130px;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
 }
-#restaurants {
-    left: 67%;
+.festival_title {
+    font-family: 'Black Han Sans', serif;
+    font-size: 60px;
+    color: white;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
-#tour {
-    left: 74%;
-}
-#festival {
-    left: 81%;
-}
-#map {
-    left: 88%;
-}
-#shopping {
-    left: 95%;
+.festival_subtitle {
+    font-family: 'Hahmlet', serif;
+    font-size: 20px;
+    color: white;
+    margin-bottom: 40px;
+    text-align: center;
 }
 
+/* 3x3 카드 그리드 (CSS Grid) */
+.festival_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    width: 95%;
+    max-width: 1400px;
+    max-height: 2000px;
+    margin-bottom: 60px;
+}
+
+/* 카드 개별 스타일 */
+.festival_card {
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 2px solid white;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 카드 이미지 */
+.card_img {
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+    background-color: rgba(0, 0, 0, 0.15);
+    border-bottom: 2px solid white;
+}
+
+/* 카드 내부 텍스트 구역 */
+.card_body {
+    padding: 25px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.card_title {
+    font-family: 'Black Han Sans', serif;
+    font-size: 28px;
+    color: #EFD2A8;
+    margin-bottom: 10px;
+}
+.card_date {
+    font-family: 'Hahmlet', serif;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+.card_desc {
+    font-family: 'Hahmlet', serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+/* 공통 푸터 */
 .footer {
     position: relative;
     z-index: 50;
@@ -82,7 +158,7 @@ body {
     font-family: 'Hahmlet', serif;
     font-size: 1.2rem;
     line-height: 2;
-    padding: 40px 0 40px 0;
+    padding: 40px 0;
 }
 .footer_links {
     font-weight: bold;
